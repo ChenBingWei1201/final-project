@@ -18,9 +18,9 @@ const OverviewPage = lazy(
 const EdittingPage = lazy(
   () => import("./containers/Article/EdittingPage.tsx"),
 );
-// const ForumMainPage = lazy(
-//   () => import("./containers/Forum/ForumMainPage.tsx"),
-// );
+const ForumMainPage = lazy(
+  () => import("./containers/Forum/ForumMainPage.tsx"),
+);
 const IntroductionPage = lazy(
   () => import("./containers/IntroductionPage.tsx"),
 );
@@ -85,14 +85,15 @@ function App() {
             }
           />
 
-          {/* <Route
+          <Route
             path="/forum"
             element={
               <Suspense fallback={<div>Loading...</div>}>
                 <ForumMainPage />
               </Suspense>
             }
-          /> */}
+          />
+
           <Route
             path="/introduction"
             element={

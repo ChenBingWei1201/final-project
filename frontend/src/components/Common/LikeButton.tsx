@@ -23,19 +23,12 @@ const LikeButton = ({ initialLiked, likerId, articleId }: LikeButtonProps) => {
     useMutation(UNLIKE_ARTICLE_MUTATION);
 
   const { data, loading, error } = useQuery(ALL_ARTICLES_QUERY);
-  // const [loadExpenseStatus, { loading: articleLoading, error: articleError }] =
-  //   useLazyQuery(ALL_ARTICLES_QUERY);
-
-  // if (articleLoading) return "Submitting...";
-  // if (articleError) return `Submission error! ${articleError.message}`;
   if (loading) return "Submitting...";
   if (error) return `Submission error! ${error.message}`;
   const article = data?.AllArticles?.find(
-    (article) => article?.id === articleId,
+    (article: any) => article?.id === articleId,
   );
 
-  // const queryArticle = loadExpenseStatus();
-  // console.log(queryArticle);
   if (!article) {
     window.location.reload();
     throw new Error("article not found!");

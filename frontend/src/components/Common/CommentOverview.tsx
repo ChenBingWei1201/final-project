@@ -15,7 +15,7 @@ const CommentOverview = ({ commenterId, content }: CommentOverviewProps) => {
   if (allLoading) return <div>Loading...</div>;
   if (allError) return <div>{allError.message}</div>;
   const commenter = queryUser?.AllUsers?.filter(
-    (user) => user?.id === commenterId,
+    (user: any) => user?.id === commenterId,
   );
   if (!commenter) throw new Error("commenter is undefined");
 

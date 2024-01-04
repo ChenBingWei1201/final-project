@@ -1,4 +1,4 @@
-import { graphql } from "../__generated___";
+import { graphql } from "../__generated__";
 
 // Announcement
 const CREATE_ANNOUNCEMENT_MUTATION = graphql(`

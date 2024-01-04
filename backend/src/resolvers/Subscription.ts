@@ -1,7 +1,7 @@
 import { pubsub } from "../PubSub/pubsub.ts";
 
 const Subscription = {
-  // Announcement Start
+  // Announcement
   AnnouncementCreated: {
     subscribe: () => pubsub.asyncIterator(["ANNOUNCEMENT_CREATED"]),
   },
@@ -13,9 +13,8 @@ const Subscription = {
   AnnouncementUpdated: {
     subscribe: () => pubsub.asyncIterator(["ANNOUNCEMENT_UPDATED"]),
   },
-  // Announcement End
 
-  // User Start
+  // User
   UserCreated: {
     subscribe: () => pubsub.asyncIterator(["USER_CREATED"]),
   },
@@ -27,9 +26,8 @@ const Subscription = {
   UserUpdated: {
     subscribe: () => pubsub.asyncIterator(["USER_UPDATED"]),
   },
-  // User End
 
-  // Question Start
+  // Question
   QuestionCreated: {
     subscribe: () => pubsub.asyncIterator(["QUESTION_CREATED"]),
   },
@@ -42,6 +40,16 @@ const Subscription = {
     subscribe: () => pubsub.asyncIterator(["QUESTION_UPDATED"]),
   },
 
+  // Like Question
+  QuestionLiked: {
+    subscribe: () => pubsub.asyncIterator(["QUESTION_LIKED"]),
+  },
+
+  QuestionUnliked: {
+    subscribe: () => pubsub.asyncIterator(["QUESTION_UNLIKED"]),
+  },
+
+  // QuestionComment
   QuestionCommentCreated: {
     subscribe: () => pubsub.asyncIterator(["QUESTION_COMMENT_CREATED"]),
   },
@@ -54,14 +62,7 @@ const Subscription = {
     subscribe: () => pubsub.asyncIterator(["QUESTION_COMMENT_UPDATED"]),
   },
 
-  QuestionLiked: {
-    subscribe: () => pubsub.asyncIterator(["QUESTION_LIKED"]),
-  },
-
-  QuestionUnliked: {
-    subscribe: () => pubsub.asyncIterator(["QUESTION_UNLIKED"]),
-  },
-
+  // Like QuestionComment
   QuestionCommentLiked: {
     subscribe: () => pubsub.asyncIterator(["QUESTION_COMMENT_LIKED"]),
   },
@@ -70,6 +71,7 @@ const Subscription = {
     subscribe: () => pubsub.asyncIterator(["QUESTION_COMMENT_UNLIKED"]),
   },
 
+  // Solution
   SolutionCreated: {
     subscribe: () => pubsub.asyncIterator(["SOLUTION_CREATED"]),
   },
@@ -82,6 +84,7 @@ const Subscription = {
     subscribe: () => pubsub.asyncIterator(["SOLUTION_UPDATED"]),
   },
 
+  // SolutionComment
   SolutionCommentCreated: {
     subscribe: () => pubsub.asyncIterator(["SOLUTION__COMMENT_CREATED"]),
   },
@@ -94,6 +97,7 @@ const Subscription = {
     subscribe: () => pubsub.asyncIterator(["SOLUTION_COMMENT_UPDATED"]),
   },
 
+  // Like Solution
   SolutionLiked: {
     subscribe: () => pubsub.asyncIterator(["SOLUTION_LIKED"]),
   },
@@ -109,9 +113,8 @@ const Subscription = {
   SolutionCommentUnliked: {
     subscribe: () => pubsub.asyncIterator(["SOLUTION_COMMENT_UNLIKED"]),
   },
-  // QuestionEnd
 
-  // Article Start
+  // Article
   ArticleCreated: {
     subscribe: () => pubsub.asyncIterator(["ARTICLE_CREATED"]),
   },
@@ -123,9 +126,16 @@ const Subscription = {
   ArticleUpdated: {
     subscribe: () => pubsub.asyncIterator(["ARTICLE_UPDATED"]),
   },
-  // Article End
 
-  // ArticleComment Start
+  // Like Article
+  ArticleLiked: {
+    subscribe: () => pubsub.asyncIterator(["ARTICLE_LIKED"]),
+  },
+  ArticleUnliked: {
+    subscribe: () => pubsub.asyncIterator(["ARTICLE_UNLIKED"]),
+  },
+
+  // ArticleComment
   ArticleCommentCreated: {
     subscribe: () => pubsub.asyncIterator(["ARTICLECOMMENT_CREATED"]),
   },
@@ -137,19 +147,8 @@ const Subscription = {
   ArticleCommentUpdated: {
     subscribe: () => pubsub.asyncIterator(["ARTICLECOMMENT_UPDATED"]),
   },
-  // Article End
-  // ArticleComment End
 
-  // ArticleLike Start
-  ArticleLiked: {
-    subscribe: () => pubsub.asyncIterator(["ARTICLE_LIKED"]),
-  },
-  ArticleUnliked: {
-    subscribe: () => pubsub.asyncIterator(["ARTICLE_UNLIKED"]),
-  },
-  // ArticleLike End
-
-  // Like ArticleComment Start
+  // Like ArticleComment
   ArticleCommentLiked: {
     subscribe: () => pubsub.asyncIterator(["ARTICLECOMMENT_LIKED"]),
   },
@@ -157,7 +156,6 @@ const Subscription = {
   ArticleCommentUnliked: {
     subscribe: () => pubsub.asyncIterator(["ARTICLECOMMENT_UNLIKED"]),
   },
-  // Like ArticleComment End
 };
 
 export { Subscription };

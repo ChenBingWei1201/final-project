@@ -2,9 +2,7 @@ import "@mdxeditor/editor/style.css";
 import { storage } from "./firebase";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { v4 } from "uuid";
-// import type { ForwardedRef } from "react";
 import { MDXEditor } from "@mdxeditor/editor/MDXEditor";
-// import type { MDXEditorMethods } from "@mdxeditor/editor";
 import type { SandpackConfig } from "@mdxeditor/editor";
 import {
   toolbarPlugin,
@@ -123,12 +121,6 @@ type TextAreaProps = {
 function TextArea({ article, editorRef }: TextAreaProps) {
   if (!article) article = "";
   const placeholder = `# Title`;
-
-  // const handleInput = (e: string) => {
-  //   setArticle(e);
-  //   console.log(e);
-  //   // console.log("article:" + { article });
-  // };
 
   return (
     <>

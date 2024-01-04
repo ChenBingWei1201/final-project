@@ -120,12 +120,12 @@ const Query = {
   // Liked ArticleComments End
 
   // Question & Solution Start
-  AllQuestions: async (parents, args, context) => {
+  AllQuestions: async (_parents, _args, _context) => {
     const questions = await prisma.question.findMany();
     return questions;
   },
 
-  HomepageQuestions: async (parents, args, context) => {
+  HomepageQuestions: async (_parents, _args, _context) => {
     const questions = await prisma.question.findMany({
       take: 5,
       orderBy: {
@@ -135,7 +135,7 @@ const Query = {
     return questions;
   },
 
-  SortQuestionsByTime: async (parents, args, context) => {
+  SortQuestionsByTime: async (_parents, _args, _context) => {
     const questions = await prisma.question.findMany({
       orderBy: {
         date: "desc",
@@ -144,7 +144,7 @@ const Query = {
     return questions;
   },
 
-  SortQuestionsByLike: async (parents, args, context) => {
+  SortQuestionsByLike: async (_parents, _args, _context) => {
     const questions = await prisma.question.findMany({
       orderBy: {
         likes: {
@@ -155,7 +155,7 @@ const Query = {
     return questions;
   },
 
-  AllQuestionComments: async (parents, args, context) => {
+  AllQuestionComments: async (_parents, _args, _context) => {
     const questionComments = await prisma.questionComment.findMany();
     return questionComments;
   },
@@ -206,12 +206,12 @@ const Query = {
     return likedQuestionComments;
   },
 
-  AllSolutions: async (parents, args, context) => {
+  AllSolutions: async (_parents, _args, _context) => {
     const solutions = await prisma.solution.findMany();
     return solutions;
   },
 
-  AllSolutionComments: async (parents, args, context) => {
+  AllSolutionComments: async (_parents, _args, _context) => {
     const solutionComments = await prisma.solutionComment.findMany();
     return solutionComments;
   },

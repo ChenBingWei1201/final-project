@@ -1,4 +1,4 @@
-import { graphql } from "../__generated___";
+import { graphql } from "../__generated__";
 
 // Announcement
 const ANNOUNCEMENT_CREATED_SUBSCRIPTION = graphql(`

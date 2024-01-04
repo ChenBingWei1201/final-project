@@ -7,7 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-
+__generated__
 node_modules
 dist
 dist-ssr

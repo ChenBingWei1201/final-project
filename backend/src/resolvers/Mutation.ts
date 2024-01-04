@@ -230,9 +230,9 @@ const Mutation = {
 
   // Question Start
   CreateQuestion: async (
-    parent,
+    _parent,
     args: { questionInput: QuestionInput },
-    context,
+    _context,
   ) => {
     const { askerId, title, content, topic, tags } = args.questionInput;
     const newQuestion = await prisma.question.create({
@@ -257,7 +257,7 @@ const Mutation = {
     return newQuestion;
   },
 
-  DeleteQuestion: async (parent, args: { id: number }, context) => {
+  DeleteQuestion: async (_parent, args: { id: number }, _context) => {
     const id = args.id;
     const existingQuestion = await prisma.question.findFirst({
       where: {
@@ -294,9 +294,9 @@ const Mutation = {
   },
 
   UpdateQuestion: async (
-    parent,
+    _parent,
     args: { id: number; questionInput: QuestionInput },
-    context,
+    _context,
   ) => {
     const id = args.id;
     const { askerId, title, content, topic, tags } = args.questionInput;
@@ -330,9 +330,9 @@ const Mutation = {
   },
 
   CreateQuestionComment: async (
-    parent,
+    _parent,
     args: { questionCommentInput: QuestionCommentInput },
-    context,
+    _context,
   ) => {
     const { commenterId, rootQuestionId, content } = args.questionCommentInput;
     const newQuestionComment = await prisma.questionComment.create({
@@ -365,7 +365,7 @@ const Mutation = {
     return newQuestionComment;
   },
 
-  DeleteQuestionComment: async (parent, args: { id: number }, context) => {
+  DeleteQuestionComment: async (_parent, args: { id: number }, _context) => {
     const id = args.id;
     const existingQuestionComment = await prisma.questionComment.findFirst({
       where: {
@@ -417,9 +417,9 @@ const Mutation = {
   },
 
   UpdateQuestionComment: async (
-    parent,
+    _parent,
     args: { id: number; questionCommentInput: QuestionCommentInput },
-    context,
+    _context,
   ) => {
     const id = args.id;
     const { commenterId, rootQuestionId, content } = args.questionCommentInput;
@@ -697,9 +697,9 @@ const Mutation = {
 
   // Solution Start
   CreateSolution: async (
-    parent,
+    _parent,
     args: { solutionInput: SolutionInput },
-    context,
+    _context,
   ) => {
     const { solverId, rootQuestionId, content } = args.solutionInput;
     const newSolution = await prisma.solution.create({
@@ -730,7 +730,7 @@ const Mutation = {
     return newSolution;
   },
 
-  DeleteSolution: async (parent, args: { id: number }, context) => {
+  DeleteSolution: async (_parent, args: { id: number }, _context) => {
     const id = args.id;
     const existingSolution = await prisma.solution.findFirst({
       where: {
@@ -782,9 +782,9 @@ const Mutation = {
   },
 
   UpdateSolution: async (
-    parent,
+    _parent,
     args: { id: number; solutionInput: SolutionInput },
-    context,
+    _context,
   ) => {
     const id = args.id;
     const { solverId, rootQuestionId, content } = args.solutionInput;
@@ -820,9 +820,9 @@ const Mutation = {
   },
 
   CreateSolutionComment: async (
-    parent,
+    _parent,
     args: { solutionCommentInput: SolutionCommentInput },
-    context,
+    _context,
   ) => {
     const { commenterId, rootSolutionId, content } = args.solutionCommentInput;
     const newSolutionComment = await prisma.solutionComment.create({
@@ -855,7 +855,7 @@ const Mutation = {
     return newSolutionComment;
   },
 
-  DeleteSolutionComment: async (parent, args: { id: number }, context) => {
+  DeleteSolutionComment: async (_parent, args: { id: number }, _context) => {
     const id = args.id;
     const existingSolutionComment = await prisma.solutionComment.findFirst({
       where: {
@@ -907,9 +907,9 @@ const Mutation = {
   },
 
   UpdateSolutionComment: async (
-    parent,
+    _parent,
     args: { id: number; solutionCommentInput: SolutionCommentInput },
-    context,
+    _context,
   ) => {
     const id = args.id;
     const { commenterId, rootSolutionId, content } = args.solutionCommentInput;
