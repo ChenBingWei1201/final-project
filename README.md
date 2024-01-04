@@ -1,12 +1,10 @@
 # 112-1 Web Programming Final Project
 
-## members
+## Members & Jobs
 
-<nl>
-  <li>陳秉緯</li>
-  <li>林禹融</li>
-  <li>張均豪</li>
-</nl>
+- 陳秉緯: 主題與功能發想、架設框架、Announcement 與 User 後端 Resolver、Firebase、Markdown Editor、deploy
+- 林禹融: 主題與功能發想、Article 後端 Resolver、前端主視覺設計、UI/UX
+- 張均豪: 主題與功能發想、Question 與 Solution 後端 Resolver、登入功能、測試與除錯
 
 ## Development
 
@@ -101,16 +99,10 @@ then the frontend will run on port 5713
 
 kill the port being stucked : `sudo kill -9 $(sudo lsof -t -i:port)`. If you want to kill port 8000, type : `sudo kill -9 $(sudo lsof -t -i:8000)`
 
-## 使用/操作方式
+## Introduction & Tutorial
 
 1. 進入主頁面後可以瀏覽所有 articles 與看到 announcements
 2. 點選每個 article，可以看到文章內容
 3. 若要留言，請先右上角登入，輸入 email 帳號，magic link 寄送認證碼到你的 email，去 email 接收密碼之後在貼到認證畫面，即可登入
 4. 登入後可以點選 Article，按下發文按鈕，即可開始編輯文章，由基本的 markdown 語法編輯，或是可以點選上方的小工具列，可以上傳圖片，寫範例程式，也可以點擊 open in sandbox，就會直接開啟 sandbox 在新的頁面。 5.寫完之後，選擇 tags，並按下右下角的 post 即可發表文章或問題 6.登入之後也可以在下方留言，點擊 post comment，即可發表問題
 5. 可以點擊閃電（就是覺得作者很電）就給他一個 7.點選作者頭像查看自介 8.點選自己頭像修改自己的自介 9.點選 About 查看網站作者資訊 10.點選網站作者聯絡方式與網站作者溝通 11.登出！
-
-## 每個組員負責的內容
-
-陳秉緯: 主題與功能發想、架設框架、Announcement 與 User 後端 Resolver、Firebase、Markdown Editor、deploy
-林禹融: 主題與功能發想、Article 後端 Resolver、前端主視覺設計、UI/UX
-張均豪: 主題與功能發想、Question 與 Solution 後端 Resolver、登入功能、測試與除錯
