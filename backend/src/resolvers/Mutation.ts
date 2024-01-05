@@ -1,4 +1,3 @@
-import { withFilter } from "graphql-subscriptions";
 import { prisma } from "../../prisma/client.ts";
 import { pubsub } from "../PubSub/pubsub.ts";
 import {
